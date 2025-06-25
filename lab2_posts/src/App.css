@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app-container {
   min-height: 100vh;
+  background: linear-gradient(to bottom right, #EFF6FF, #E0E7FF);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 50%;
+  margin: auto;
+  min-width: 500px;
+}
+
+.content-container {
+  width: calc(100% - 4rem);
+  /*max-width: 42rem;*/
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.lab-title {
+  font-size: 1.7rem;
+  text-align: center;
+  margin: 1em;
+}
+
+.post-form {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 0.5rem;
   display: flex;
   flex-direction: column;
+  align-items: start;
+  gap: 0.5rem; /* отступы между элементами внутри */
+}
+
+.post-textarea {
+  width: 100%;
+  height: 30vh;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  resize: none;
+  outline: none;
+}
+
+.post-textarea:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #8b5cf6;
+}
+
+.error-message {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #fee2e2;
+  border: 1px solid #f87171;
+  color: #b91c1c;
+  border-radius: 0.25rem;
+}
+
+.post-controls {
+  width: 100%;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 1rem; /* отступ между элементами */
+}
+
+.add-post-button {
+  width: 25%;
+  height: 3rem;
+  background-color: #7c3aed;
   color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.add-post-button:hover {
+  background-color: #6d28d9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-post-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #8b5cf6, 0 0 0 4px #ddd6fe;
 }
+
